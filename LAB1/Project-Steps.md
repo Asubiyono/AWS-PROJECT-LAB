@@ -1,4 +1,4 @@
-##Steps
+**Steps**
 
 1. Create an S3 bucket
 Link : https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html#creating-bucket 
