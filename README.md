@@ -9,4 +9,4 @@ Currently, I'm working on an **end-to-end AWS implementation** that will empower
 Feel free to explore, learn, and join me on this exciting adventure! Together, let’s unlock the power of the cloud and pave the way for innovation. 
 
 Happy cloud computing! ☁️💻
-![AWS Figure](path/to/your/image.png)
+
