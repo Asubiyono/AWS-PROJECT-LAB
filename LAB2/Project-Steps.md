@@ -12,3 +12,22 @@ Refer to this [AWS RDS Setup Guide](https://docs.aws.amazon.com/AmazonRDS/latest
 - **Storage**: 20GB `gp2`  
 - **Network**: Default VPC/Subnet, allow public access  
 - **Authentication**: Password-based  
+
+## **2. Create an EC2 Instance**
+
+Refer to this [AWS EC2 Getting Started Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html) for detailed instructions.
+
+### **Key Steps**:
+1. Set up an EC2 instance on **Ubuntu 20.04 LTS** for deploying a Python/Flask backend.
+2. Name the instance `ecommerce_backend` and select `t2.micro` as the instance type.
+3. Create a new **Key-pair** and save it locally.
+4. Set up a **Security Group** to allow SSH (22), HTTP (80), and HTTPS (443) traffic from anywhere.
+5. Configure storage to **8GB**.
+6. Launch the instance.
+
+## **3. Install SSH & SCP on Your Local System**
+
+Refer to this [guide on using the SCP command on Windows](https://success.tanaza.com/s/article/How-to-use-SCP-command-on-Windows) for detailed instructions.
+
+### **Overview**:
+SSH and SCP must be installed on your local computer to log in to the EC2 instance and copy files from the local system to the EC2 server using SSH and SCP commands.
