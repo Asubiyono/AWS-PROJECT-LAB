@@ -45,3 +45,21 @@ SSH and SCP must be installed on the local computer to log in to the EC2 instanc
 
 3. After the installation, create a folder named `ecommerce_app` in the root directory to store the Python/Flask scripts for future steps.
 
+## **5. Modify Security Group for the MySQL Instance**
+
+1. Modify the inbound settings of the Security Group for the MySQL RDS instance to enable connections from the EC2 instance.
+   
+2. Locate the RDS MySQL instance and open the **Connectivity and Security** tab.
+
+3. Identify the **Security Group** associated with the instance.
+
+4. Modify the Security Group to allow public access to **TCP port 3306** for MySQL/Aurora.
+
+5. ## **6. Create Database Tables and Load Data into MySQL DB**
+
+1. Connect to the MySQL RDS instance from the EC2 instance by executing the SSH command in your local terminal.
+
+2. Once connected to the EC2 instance, access the MySQL instance to create a database and execute the DDL statements for the required tables.
+
+3. After creating the database and tables in the MySQL RDS instance, ingest data from the CSV files located in the `db_files` directory on the EC2 instance.
+
