@@ -1,7 +1,7 @@
 ## **Steps**
 
 ## **1. Create an S3 bucket**
-Link : https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html#creating-bucket 
+Refer to the [AWS DynamoDB documentation]([https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/getting-started-step-1.html](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html#creating-bucket)). 
 
 ## **2. Create a Kinesis data stream** 
 Link : https://docs.aws.amazon.com/streams/latest/dev/tutorial-stock-data-kplkcl-create-stream.html 
