@@ -99,5 +99,14 @@ Write a Python script for a Lambda function to consume and process taxi trip dat
    - Categorize trips based on value, duration, and fare efficiency.
    - Store the analysis outcomes in DynamoDB for automated data processing and insights.
 
+## **8. Deploy Consumer Lambda Function**
+
+Refer to the [link](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html) for AWS Lambda Python documentation.
+
+Use the code from `lambda-kinesis-consumer.py`, then set up and activate a Kinesis trigger to handle data from the `taxi_trips` stream.
+
+## **9. Deploy Producer Lambda Function**
+
+Use the code from `lambda-kinesis-producer.py`, then set up and activate an S3 trigger to write data into the `taxi_trips` Kinesis data stream from a CSV file in the S3 bucket.
 
 
