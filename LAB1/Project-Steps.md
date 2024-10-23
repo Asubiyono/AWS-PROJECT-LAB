@@ -1,11 +1,11 @@
 ## **Steps**
 
-## **1. Create an S3 bucket**
-Refer to the [AWS DynamoDB documentation]([https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/getting-started-step-1.html](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html#creating-bucket)). 
+## **1. Create an S3 bucket**  
+Refer to the [AWS S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html#creating-bucket).
 
-## **2. Create a Kinesis data stream** 
-Link : https://docs.aws.amazon.com/streams/latest/dev/tutorial-stock-data-kplkcl-create-stream.html 
 
+## **2. Create a Kinesis data stream**  
+Refer to the [AWS Kinesis data stream documentation](https://docs.aws.amazon.com/streams/latest/dev/tutorial-stock-data-kplkcl-create-stream.html).
 
 ## **3. Create DynamoDB tables to store aggregated results**
 
@@ -17,7 +17,7 @@ Refer to the [AWS DynamoDB documentation](https://docs.aws.amazon.com/amazondyna
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c) **distance_to_fare_ratio**: Newly added, this table records the fare amount per unit distance, highlighting trip profitability.
 
 ## **4. Create DynamoDB tables to store aggregated results**
-Link: [AWS IAM Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html)  
+Refer to the [AWS IAM Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;a) **Create IAM Policy**:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Name the policy `kinesis-write-records-policy`  
