@@ -44,3 +44,30 @@ Refer to the [AWS IAM Documentation](https://docs.aws.amazon.com/IAM/latest/User
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• `lambda-dynamo-write-policy`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• `AWSLambdaBasicExecutionRole`:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ This role is essential for your Lambda function, enabling it to read data from your Kinesis stream and write the processed information to DynamoDB, while ensuring the function has basic execution permissions, like writing logs to CloudWatch.
+
+## **6. Develop Producer Lambda Function to Write Data into Kinesis**
+
+### File: `lambda-kinesis-producer.py`
+
+Write a Python script for a Lambda function to read data from an S3 bucket and send it to a Kinesis stream. The function will be triggered by an S3 event and deployed to AWS Lambda.
+
+### Steps:
+
+1. **Initialization**:  
+   Set up AWS services and configure logging for capturing essential information and errors.
+
+2. **Handle S3 Event**:  
+   Extract file name and bucket details from the event trigger.
+
+3. **Read from S3**:  
+   Retrieve and read the taxi trip data from the specified S3 bucket.
+
+4. **Process Data**:  
+   Parse and format the data for further processing.
+
+5. **Send to Kinesis**:  
+   Stream processed records to the `taxi_trips` Kinesis stream.
+
+6. **Error Handling**:  
+   Implement proper error management and logging throughout the process.
+
