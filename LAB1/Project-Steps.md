@@ -1,13 +1,13 @@
 **Steps**
 
-1. Create an S3 bucket
+** 1. Create an S3 bucket **
 Link : https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html#creating-bucket 
 
-2. Create a Kinesis data stream
+** 2. Create a Kinesis data stream ** 
 Link : https://docs.aws.amazon.com/streams/latest/dev/tutorial-stock-data-kplkcl-create-stream.html 
 
 
-3. Create DynamoDB tables to store aggregated results
+** 3. Create DynamoDB tables to store aggregated results ** 
 , refer to the [AWS DynamoDB documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/getting-started-step-1.html).
 
 &nbsp;&nbsp;&nbsp;&nbsp;Set up three DynamoDB tables, each table will use `trip_id` as the Partition key without a Sort key:  
