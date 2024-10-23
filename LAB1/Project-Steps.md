@@ -71,3 +71,33 @@ Write a Python script for a Lambda function to read data from an S3 bucket and s
 6. **Error Handling**:  
    Implement proper error management and logging throughout the process.
 
+## **7. Develop Consumer Lambda Function to Consume Streaming Data from Kinesis**
+
+### File: `lambda-kinesis-consumer.py`
+
+Write a Python script for a Lambda function to consume and process taxi trip data from the `taxi_trips` Kinesis data stream, with Kinesis as the trigger. The function will be deployed to AWS Lambda.
+
+### Implementation Steps:
+
+1. **Import Necessary Modules**:  
+   Start by importing the required libraries for AWS services, data processing, and logging.
+
+2. **Set Up Configurations**:  
+   Configure any necessary settings for calculations and logging.
+
+3. **Define Key Functions**:
+   - **Calculate Trip Durations**:  
+     Implement a function to calculate the duration of each trip.
+   - **Generate/Retrieve Trip IDs**:  
+     Create a function to generate or retrieve unique trip IDs for data records.
+   - **Calculate Fare per Distance Unit**:  
+     Develop a function to compute fare based on the distance traveled.
+
+4. **Write the Lambda Handler Function**:  
+   - Connect to DynamoDB.
+   - Process data records received from Kinesis.
+   - Categorize trips based on value, duration, and fare efficiency.
+   - Store the analysis outcomes in DynamoDB for automated data processing and insights.
+
+
+
