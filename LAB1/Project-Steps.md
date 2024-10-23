@@ -11,8 +11,8 @@ Link : https://docs.aws.amazon.com/streams/latest/dev/tutorial-stock-data-kplkcl
 
 Set up three DynamoDB tables, each table will use `trip_id` as the Partition key without a Sort key:
 
-a) **high_value_trips**:  
-Captures trips with total amounts exceeding a set threshold.
+    a) **high_value_trips**:  
+      Captures trips with total amounts exceeding a set threshold.
 
 b) **trip_duration_analysis**:  
 Stores summaries of trip durations, categorizing them into groups like short, medium, or long.
