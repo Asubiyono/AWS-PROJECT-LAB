@@ -1,20 +1,34 @@
-## **10. Trigger End-to-End Real-Time Streaming Pipeline**
+## **Migrate a Backend E-commerce Application as a Microservice to EC2 & MySQL RDS**
 
-Refer to the [AWS CloudWatch Logs Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html) and the [AWS DynamoDB Getting Started Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-gettingstarted.html).
+### **Project Objective**  
+This project involves migrating key modules of an e-commerce startup's application from a monolithic architecture to a microservice-oriented architecture. The goal is to deploy each module as an independent microservice using Flask, running on EC2, with a MySQL database hosted on RDS. The migration will ensure scalability and secure database access.
 
-### Steps:
+### **Project Objectives**:
+1. **Deploy Microservices Using Flask on EC2**:  
+   - Implement each independent module as a standalone microservice.
+   
+2. **Ensure Scalability**:  
+   - Use EC2 autoscaling policies to ensure the microservices can scale based on traffic demands.
+   
+3. **Set Up MySQL Database on RDS**:  
+   - Configure a MySQL database on RDS to serve as the backend for all microservices.
+   
+4. **Implement AWS Secrets Manager**:  
+   - Use Secrets Manager to securely access RDS credentials dynamically from the Flask application.
 
-1. **Upload Data**:  
-   Upload the `taxi_trips.csv` file to the S3 bucket, which will trigger the `lambda-kinesis-producer` Lambda function.
+### **Key Steps**:
+1. **Deploy Standalone Flask-Based Microservices on EC2 Instances**:  
+   Each microservice will be deployed independently on separate EC2 instances to handle different features of the e-commerce platform.
 
-2. **Monitor Lambda Function**:  
-   Check the activity of the `lambda-kinesis-producer` function via CloudWatch logs under the Logs tab to ensure it runs correctly.
+2. **Configure Autoscaling Policies to Handle Varying Traffic**:  
+   Ensure that EC2 instances can automatically scale in or out depending on traffic, ensuring optimal performance and cost management.
 
-3. **Inspect Kinesis Data Stream**:  
-   Navigate to the `taxi_trips` Kinesis data stream and use the Data Viewer. Select a shard and choose the "Trim horizon" option to view incoming JSON payloads.
+3. **Set Up and Connect Each Service to the MySQL Database on RDS**:  
+   Configure a MySQL RDS instance to serve as the central database for all microservices. Connect each microservice to this backend using secure access.
 
-4. **Verify Lambda Consumer**:  
-   Check the `lambda-kinesis-consumer` function’s invocations in CloudWatch Logs to confirm that records are being processed properly.
+4. **Securely Manage RDS Credentials Using Secrets Manager**:  
+   AWS Secrets Manager will be used to securely store and retrieve database credentials, ensuring the Flask applications access RDS securely and dynamically.
 
-5. **Query DynamoDB Tables**:  
-   Switch to DynamoDB and use PartiQL to query the following tables: `high_value_trips`, `distance_to_fare_ratio`, and `trip_duration_analysis`, ensuring the data is properly ingested and processed throughout the pipeline.
+---
+
+This architecture ensures scalability, security, and improved maintainability for the company’s application, optimizing performance and resource allocation.
