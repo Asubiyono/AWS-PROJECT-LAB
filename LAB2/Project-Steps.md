@@ -29,5 +29,19 @@ Refer to this [AWS EC2 Getting Started Guide](https://docs.aws.amazon.com/AWSEC2
 
 Refer to this [guide on using the SCP command on Windows](https://success.tanaza.com/s/article/How-to-use-SCP-command-on-Windows) for detailed instructions.
 
-### **Overview**:
-SSH and SCP must be installed on your local computer to log in to the EC2 instance and copy files from the local system to the EC2 server using SSH and SCP commands.
+SSH and SCP must be installed on the local computer to log in to the EC2 instance and copy files from the local system to the EC2 server using SSH and SCP commands.
+
+## **4. Install Dependencies on EC2**
+
+1. Connect to the EC2 instance via SSH using the `.pem` file from your local terminal.
+2. Install the following libraries:
+   - `python3-pip`
+   - `default-libmysqlclient-dev`
+   - `python3-flask`
+   - `flask-mysql`
+   - `pkg-config`
+   - `flask-mysqldb`
+   - `boto3`
+
+3. After the installation, create a folder named `ecommerce_app` in the root directory to store the Python/Flask scripts for future steps.
+
