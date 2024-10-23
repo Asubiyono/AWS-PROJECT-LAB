@@ -29,3 +29,18 @@ Refer to the [AWS IAM Documentation](https://docs.aws.amazon.com/IAM/latest/User
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o The `kinesis-write-records-policy` for write access to Kinesis.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o `AmazonS3ReadOnlyAccess` for read-only access to S3  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o `AWSLambdaBasicExecutionRole` for Lambda to write logs to CloudWatch.
+
+## **5. Create IAM Role for Kinesis consumer Lambda Function**
+
+&nbsp;&nbsp;&nbsp;&nbsp;a) **Create 2 IAM Policies**:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The first policy `lambda-kinesis-read-policy`:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Grant permissions to allow the Lambda function to read from the Kinesis Data Stream, including `GetRecords` and `DescribeStream`.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The second policy `lambda-dynamo-write-policy`:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Grant permissions to allow the Lambda function to write to DynamoDB, allowing actions such as `PutItem` and `UpdateItem`.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;b) **Create IAM Role `lambda-kinesis-streams-consumer-role`**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attach the following policies:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• `lambda-kinesis-read-policy`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• `lambda-dynamo-write-policy`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• `AWSLambdaBasicExecutionRole`:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ This role is essential for your Lambda function, enabling it to read data from your Kinesis stream and write the processed information to DynamoDB, while ensuring the function has basic execution permissions, like writing logs to CloudWatch.
