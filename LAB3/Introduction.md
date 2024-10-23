@@ -1,7 +1,5 @@
 # 🌐 Automate Load Balancer and VPC Creation using CloudFormation
 
-![Logo](https://your-logo-url.com/logo.png) <!-- Replace with your actual logo URL -->
-
 ## Project Objective 🎯
 This project involves migrating key modules of an e-commerce startup's application from a monolithic architecture to a microservice-oriented architecture. The goal is to deploy each module as an independent microservice using Flask, running on EC2, with a MySQL database hosted on RDS. The migration will ensure scalability and secure database access.
 
