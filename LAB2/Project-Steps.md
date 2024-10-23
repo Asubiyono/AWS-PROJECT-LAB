@@ -55,7 +55,7 @@ SSH and SCP must be installed on the local computer to log in to the EC2 instanc
 
 4. Modify the Security Group to allow public access to **TCP port 3306** for MySQL/Aurora.
 
-5. ## **6. Create Database Tables and Load Data into MySQL DB**
+## **6. Create Database Tables and Load Data into MySQL DB**
 
 1. Connect to the MySQL RDS instance from the EC2 instance by executing the SSH command in your local terminal.
 
