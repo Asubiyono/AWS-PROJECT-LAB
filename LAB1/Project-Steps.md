@@ -8,7 +8,7 @@ Link : https://docs.aws.amazon.com/streams/latest/dev/tutorial-stock-data-kplkcl
 
 
 3. Create DynamoDB tables to store aggregated results
-refer to the [AWS DynamoDB documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/getting-started-step-1.html).
+, refer to the [AWS DynamoDB documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/getting-started-step-1.html).
 
 &nbsp;&nbsp;&nbsp;&nbsp;Set up three DynamoDB tables, each table will use `trip_id` as the Partition key without a Sort key:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a) **high_value_trips**: Captures trips with total amounts exceeding a set threshold.  
